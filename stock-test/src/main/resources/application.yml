@@ -9,3 +9,4 @@ spring:
       discovery:
         password: nacos
         username: q8!%U!Tqk&n&2Tw
+        namespace: b1148c7d-98de-4bd9-b155-bd1b4c7029c0

@@ -1,0 +1,20 @@
+server:
+  port: 8021
+spring:
+  application:
+    name: order-service
+  cloud:
+    nacos:
+      server-addr: ${NACOS_SERVER_ADDR:192.168.4.44:8848,192.168.4.45:8848,192.168.4.46:8848}  # 注册中心地址
+      discovery:
+        password: nacos
+        username: q8!%U!Tqk&n&2Tw8
+        namespace: b1148c7d-98de-4bd9-b155-bd1b4c7029c0
+logging:
+  level:
+    learning.order.feign.ScockFeignService: debug
+feign:
+  client:
+    config:
+      srock-service:
+        logger-level: full

@@ -21,4 +21,11 @@ public class StockController {
         System.out.println("扣减库存port"+port);
         return "扣减库存port:"+port;
     }
+
+    @RequestMapping(value = "/reductFeign")
+    public String reductFeign(){
+        System.out.println("扣减库存port"+port);
+        return "扣减库存port:"+port+"OpenFeign接口";
+    }
+
 }

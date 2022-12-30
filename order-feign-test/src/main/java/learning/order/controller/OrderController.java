@@ -16,21 +16,21 @@ import org.springframework.web.client.RestTemplate;
 public class OrderController {
     @Autowired
     RestTemplate restTemplate;
-    @Autowired
-    ScockFeignService scockFeignService;
-    @RequestMapping("/add")
-    public String addOrder(){
-        System.out.println("下单");
-        String msg = restTemplate.getForObject("http://localhost:8081/stock/reduct", String.class);
-        System.out.println(msg);
-        return "下单";
-    }
+//    @Autowired
+//    ScockFeignService scockFeignService;
+//    @RequestMapping("/add")
+//    public String addOrder(){
+//        System.out.println("下单");
+//        String msg = restTemplate.getForObject("http://localhost:8081/stock/reduct", String.class);
+//        System.out.println(msg);
+//        return "下单";
+//    }
 
     @RequestMapping("/addOrderTest")
-    public String addOrderTest(){
+    public String addOrderTest(Integer i,String number){
         System.out.println("下单");
-        String reduct = scockFeignService.reduct();
-        System.out.println(reduct);
+//        String reduct = scockFeignService.reduct();
+//        System.out.println(reduct);
         return "下单";
     }
 }

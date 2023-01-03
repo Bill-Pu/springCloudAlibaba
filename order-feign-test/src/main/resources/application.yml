@@ -3,6 +3,11 @@ server:
 spring:
   application:
     name: order-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/security?characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: admin
+    driver-class-name: com.mysql.cj.jdbc.Driver
   cloud:
     nacos:
       server-addr: ${NACOS_SERVER_ADDR:192.168.4.44:8848,192.168.4.45:8848,192.168.4.46:8848}  # 注册中心地址
@@ -18,3 +23,7 @@ feign:
     config:
       srock-service:
         logger-level: full
+mybatis-plus:
+  configuration:
+    # 是否打印sql语句 调试的时候可以开启
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

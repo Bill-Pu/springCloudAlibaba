@@ -26,6 +26,10 @@ public class BigDecimalSerializer extends JsonSerializer<BigDecimal> {
         } else {
             gen.writeNumber(value);
         }
+
+
+
+
         System.out.println();
     }
 }

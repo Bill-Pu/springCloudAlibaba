@@ -3,6 +3,19 @@ server:
 spring:
   application:
     name: order-service
+  redis:
+    cluster:
+      nodes: 192.168.4.125:8001,192.168.4.125:8002,192.168.4.125:8003,192.168.4.125:8004,192.168.4.125:8005,192.168.4.125:8006
+      max-redirects: 3
+    password: H5H4it@SeMBPUFYA
+    lettuce:
+      enabled: true
+      pool:
+        max-idle: 50
+        max-active: 200
+        max-wait: -1
+        min-idle: 10
+        timeout: 10000
   datasource:
     url: jdbc:mysql://localhost:3306/security?characterEncoding=utf-8&serverTimezone=UTC
     username: root

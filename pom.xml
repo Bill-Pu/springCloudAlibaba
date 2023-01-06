@@ -7,6 +7,7 @@
         <module>order-test</module>
         <module>stock</module>
         <module>stock-test</module>
+        <module>config-nacos</module>
     </modules>
 
     <groupId>com.example</groupId>

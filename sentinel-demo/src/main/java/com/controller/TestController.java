@@ -41,7 +41,7 @@ public class TestController {
         rule.setGrade(RuleConstant.FLOW_GRADE_QPS);
         rule.setCount(1);
         rules.add(rule);
+        System.out.println("dev change");
         FlowRuleManager.loadRules(rules);
-
     }
 }

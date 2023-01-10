@@ -2,9 +2,11 @@ package learning.order.controller;
 
 import com.alibaba.fastjson.JSON;
 import learning.order.BigdecimalTest;
+import learning.order.feign.ScockFeignService;
 import learning.order.generator.domain.SysUser;
 import learning.order.generator.service.SysUserService;
 import learning.order.aspect.AnnotationLogAspect;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,8 +24,8 @@ import java.util.List;
 @RequestMapping("/order")
 public class OrderController {
 
-//    @Autowired
-//    ScockFeignService scockFeignService;
+    @Autowired
+    ScockFeignService scockFeignService;
 //    @RequestMapping("/add")
 //    public String addOrder(){
 //        System.out.println("下单");
@@ -47,8 +49,8 @@ public class OrderController {
         List<SysUser> sysUsers1 = (List<SysUser>) redisTemplate.opsForValue().get("sysUsers");
         SysUser sysUser = sysUsers1.get(0);
         System.out.println("下单");
-//        String reduct = scockFeignService.reduct();
-//        System.out.println(reduct);
+        String reduct = scockFeignService.reduct();
+        System.out.println(reduct);
         return "下单";
     }
     @RequestMapping("/test2")

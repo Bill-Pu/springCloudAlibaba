@@ -7,7 +7,8 @@
         <module>order-test</module>
         <module>stock</module>
         <module>stock-test</module>
-        <module>config-nacos</module>
+        <module>config_nacos</module>
+        <module>sentinel-demo</module>
     </modules>
 
     <groupId>com.example</groupId>
@@ -19,6 +20,17 @@
     <properties>
         <java.version>1.8</java.version>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+        </dependency>
+    </dependencies>
     <dependencyManagement>
         <dependencies>
             <dependency>

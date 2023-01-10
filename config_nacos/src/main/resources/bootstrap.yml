@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: nacos-config
+  cloud:
+    nacos:
+      server-addr: ${NACOS_SERVER_ADDR:192.168.4.44:8848,192.168.4.45:8848,192.168.4.46:8848}  # 注册中心地址
+      password: nacos
+      username: q8!%U!Tqk&n&2Tw8
+      config:
+        namespace: b1148c7d-98de-4bd9-b155-bd1b4c7029c0
+#        refresh-enabled: true
+        file-extension: yaml
+        shared-configs:
+          - dataId: common-config.yml
+            refresh: true
+#      config:
+#        shared-configs:
+#          - dataId: nacos-config.yml
+#            refresh: true

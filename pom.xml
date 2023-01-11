@@ -7,7 +7,6 @@
         <module>stock-test</module>
         <module>config_nacos</module>
         <module>sentinel-demo</module>
-        <module>seata</module>
     </modules>
 
     <groupId>com.example</groupId>

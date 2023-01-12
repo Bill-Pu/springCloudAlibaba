@@ -35,7 +35,7 @@ public class OrderController {
     @Resource
     private SysUserService sysUserService;
     @Resource
-    private RedisTemplate redisTemplate;
+    private RedisTemplate<String, List<SysUser>> redisTemplate;
     @RequestMapping("/addOrderTest")
     @AnnotationLogAspect(description = "测试",value = "addOrderTest")
     public String addOrderTest(){
@@ -44,7 +44,7 @@ public class OrderController {
         String s = JSON.toJSONString(list);
         List<SysUser> sysUsers = JSON.parseArray(s, SysUser.class);
         redisTemplate.opsForValue().set("sysUsers", sysUsers);
-        List<SysUser> sysUsers1 = (List<SysUser>) redisTemplate.opsForValue().get("sysUsers");
+        List<SysUser> sysUsers1 = redisTemplate.opsForValue().get("sysUsers");
         SysUser sysUser = sysUsers1.get(0);
         System.out.println("下单");
         String reduct = scockFeignService.reduct();

@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
  */
 @SpringBootApplication
 @EnableFeignClients
-@MapperScan("learning.order.seata.order.generator")
+@MapperScan("learning.order.seata.order.generator.mapper")
 public class OrderApplication {
     public static void main(String[] args) {
         SpringApplication.run(OrderApplication.class,args);

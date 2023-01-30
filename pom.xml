@@ -7,6 +7,7 @@
         <module>stock-test</module>
         <module>config_nacos</module>
         <module>sentinel-demo</module>
+        <module>order-feign-test</module>
     </modules>
 
     <groupId>com.example</groupId>

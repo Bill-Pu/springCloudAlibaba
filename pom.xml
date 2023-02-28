@@ -8,6 +8,7 @@
         <module>config_nacos</module>
         <module>sentinel-demo</module>
         <module>order-feign-test</module>
+        <module>dindind_demo</module>
     </modules>
 
     <groupId>com.example</groupId>
